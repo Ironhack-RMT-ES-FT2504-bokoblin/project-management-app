@@ -7,7 +7,7 @@ import axios from "axios";
 function ProjectDetailsPage () {
   
   const params = useParams()
-  // console.log(params)
+  console.log(params)
 
   const [ details, setDetails ] = useState(null)
 
@@ -19,7 +19,7 @@ function ProjectDetailsPage () {
 
     try {
       
-      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/projects/${params.projectId}?_embed=tasks`)
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/projects/${params.patata}?_embed=tasks`)
       console.log(response.data)
 
       setDetails(response.data)
